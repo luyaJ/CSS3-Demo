@@ -1,0 +1,44 @@
+.emoji{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: 50px;
+    background: #F55064;
+    position: relative;
+}
+.heart{
+    -webkit-animation: heart-beat 1s linear infinite alternate;
+    animation: heart-beat 1s linear infinite alternate;
+    height: 80px;
+    width: 80px;
+}
+.heart:before,.heart:after{
+    content: '';
+    width: 40px;
+    height: 64px;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.heart:before{
+    -webkit-transform: translate(20px) rotate(-45deg);
+    transform: translate(20px) rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.heart:after{
+    -webkit-transform: translate(-20px) rotate(45deg);
+    transform: translate(-20px) rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+@keyframes heart-beat {
+    25% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.6);
+    }
+}
