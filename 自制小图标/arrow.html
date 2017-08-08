@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>箭头</title>
+    <style>
+        .demo{
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-right: 15px solid red;
+            -webkit-transform: rotate(10deg);
+            -o-transform: rotate(10deg);
+            -moz-transform: rotate(10deg);
+            -ms-transform: rotate(10deg);
+        }
+        .demo:after{
+            content: "";
+            position: absolute;
+            border-top: 5px solid red;
+            border-radius: 20px 0 0 0;
+            top: -18px;
+            left: -10px;
+            width: 15px;
+            height: 15px;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo"></div>
+</body>
+</html>
