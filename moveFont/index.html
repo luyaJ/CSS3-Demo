@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>改变字体颜色</title>
+  <style>
+    .box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      font-size: 3em;
+      width: 6em;
+      height: 1.2em;
+    }
+
+    .up, .down {
+      position: absolute;
+      height: 100%;
+      line-height: 1;
+    }
+
+    .up {
+      z-index: 2;
+      color: lightblue;
+      width: 1em;
+      overflow: hidden;
+      border-radius: 15%;
+      background: #eee;
+      animation: run 3.5s infinite;
+      -webkit-animation: run 3.5s infinite;
+    }
+
+    @keyframes run {
+      0% {
+        left: -1em;
+      }
+      100% {
+        left: 6em;
+      }
+    }
+    @-webkit-keyframes run {
+      0% {
+        left: -1em;
+      }
+      100% {
+        left: 6em;
+      }
+    }
+
+    .up::before {
+      content: '今天是星期四';
+      position: absolute;
+      width: 6em;
+      animation: run2 3.5s infinite;
+      -webkit-animation: run2 3.5s infinite;
+    }
+
+    @keyframes run2 {
+      0% {
+        left: 1em;
+      }
+      100% {
+        left: -6em;
+      }
+    }
+    @-webkit-keyframes run2 {
+      0% {
+        left: 1em;
+      }
+      100% {
+        left: -6em;
+      }
+    }
+
+    .down {
+      z-index: 1;
+      color: rgb(233, 114, 44);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="down">今天是星期四</div>
+    <div class="up"></div>
+  </div>
+</body>
+</html>
